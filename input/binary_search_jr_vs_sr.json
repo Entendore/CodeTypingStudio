@@ -1,0 +1,6 @@
+{
+  "name": "Binary Search",
+  "language": "Python",
+  "junior_code": "def binary_search(arr, target):\n    for i, x in enumerate(arr):\n        if x == target:\n            return i\n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9], 5))\n",
+  "senior_code": "from bisect import bisect_left\nfrom collections.abc import Sequence\n\ndef binary_search(arr: Sequence[int], target: int) -> int:\n    \"\"\"Return index of target in sorted arr, or -1.\"\"\"\n    i = bisect_left(arr, target)\n    return i if i < len(arr) and arr[i] == target else -1\n\nprint(binary_search([1, 3, 5, 7, 9], 5))\n"
+}
