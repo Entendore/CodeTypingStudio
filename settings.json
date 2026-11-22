@@ -1,0 +1,15 @@
+{
+  "project1": {
+    "theme": "Dracula",
+    "fmt": "YouTube (16:9)",
+    "layout": "Stacked (50/50)",
+    "audio": "Goblin Cave",
+    "encoder": "NVENC (NVIDIA)",
+    "kb": false,
+    "wm": false,
+    "wm_text": "",
+    "j_wpm": 100,
+    "s_wpm": 100,
+    "bgm": ""
+  }
+}

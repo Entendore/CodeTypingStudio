@@ -1,0 +1,6 @@
+{
+  "name": "Quicksort",
+  "language": "Python",
+  "junior_code": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[0]\n    less = [x for x in arr[1:] if x <= pivot]\n    more = [x for x in arr[1:] if x > pivot]\n    return quicksort(less) + [pivot] + quicksort(more)\n\nprint(quicksort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3]))\n",
+  "senior_code": "from collections.abc import Sequence\nfrom typing import TypeVar\n\nT = TypeVar('T', bound='int | float | str')\n\ndef quicksort(arr: Sequence[T]) -> list[T]:\n    \"\"\"Three-way partition quicksort (Dutch national flag).\"\"\"\n    if len(arr) <= 1:\n        return list(arr)\n    pivot = arr[len(arr) // 2]\n    lo = [x for x in arr if x < pivot]\n    eq = [x for x in arr if x == pivot]\n    hi = [x for x in arr if x > pivot]\n    return quicksort(lo) + eq + quicksort(hi)\n\nprint(quicksort([3, 1, 4, 1, 5, 9, 2, 6, 5, 3]))\n"
+}

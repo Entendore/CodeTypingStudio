@@ -1,0 +1,6 @@
+{
+  "name": "Word Count",
+  "language": "Python",
+  "junior_code": "def word_count(text):\n    words = text.split()\n    counts = {}\n    for w in words:\n        if w in counts:\n            counts[w] = counts[w] + 1\n        else:\n            counts[w] = 1\n    return counts\n\nprint(word_count('the cat sat on the mat'))\n",
+  "senior_code": "from collections import Counter\nfrom typing import Mapping\n\ndef word_count(text: str) -> Mapping[str, int]:\n    \"\"\"Count word frequencies using collections.Counter.\"\"\"\n    return Counter(text.split())\n\nprint(word_count('the cat sat on the mat'))\n"
+}
